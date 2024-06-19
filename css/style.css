@@ -81,7 +81,7 @@ a {
 
 /* Contador de carrito */
 .cantidad-carrito {
-    background-color: rgb(174, 55, 69);
+    background-color: rgb(255, 0, 30);
     color: rgb(255, 255, 255);
     border-radius: 50%;
     font-size: 12px;
@@ -183,7 +183,7 @@ footer p {
     border-radius: 8px;
     width: calc(25% - 100px); /* Ancho de cada producto para cuatro columnas */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centra el contenido dentro de cada producto */
+    text-align: center; 
 }
 
 .class-card img {
@@ -306,7 +306,7 @@ footer p {
 /** Estilos del About Us */
 
 .about-container {
-    height: 100rem;
+    height: 60rem;
     margin-top: 20px;
     padding-top: 100px;
 }
@@ -314,7 +314,7 @@ footer p {
 /** Estilos de contacto */
 
 .contact-container {
-    height: 100rem;
+    height: 60rem;
     margin-top: 20px;
     padding-top: 100px;
 } 
@@ -341,7 +341,7 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.mainContact h1 {
     padding-top: 20px;
     text-align: center;
     color: #333;
