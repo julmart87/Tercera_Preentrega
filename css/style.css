@@ -1,0 +1,406 @@
+/** Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: rgb(184, 182, 141); */
+    background-color: rgb(231, 231, 222);
+}
+
+h1 {
+    padding-top: 15rem;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    text-align: center;
+}
+
+/** Estilos del Navbar */
+.header {
+    position: fixed;
+    top: 0; 
+    width: 100%;
+    height: 6rem;
+    /* background-color: #333; */
+    background-color: #1a1919;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 50px;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Play", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-weight: 10;
+    font-style:oblique;
+}
+
+.navbar ul li a:hover {
+    color: #ddd;
+}
+
+
+.ver-carrito img {
+    width: 32px;
+    cursor: pointer;
+}
+
+a {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+}
+
+/* Contador de carrito */
+.cantidad-carrito {
+    background-color: rgb(174, 55, 69);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 30px;
+    right: 75px;
+    position: absolute;
+    display: none;
+}
+
+/** Estilos del Footer */
+footer {
+    height: 6rem;
+    background-color: #0f0e0e;
+    bottom: 0;
+}
+
+footer p {
+    padding-top: 2rem;
+    color: #ddd;
+    text-align: center;
+    font-family: "Play", sans-serif;
+    font-weight: 100;
+    font-style: oblique;
+}
+
+/** Estilos del Banner */
+
+.banner {
+    background-image: url("../assets/img/fondo2.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.banner-container {
+    text-align: center;
+    padding:5rem 0;
+}
+
+.banner h1 {
+    margin: 0;
+    color:azure;
+    text-shadow: 1px 1.5px 3px rgb(38, 36, 36);
+    font-size: 4rem;
+    -webkit-animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+/** Animacion h1 */
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  
+
+.banner h3 {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+/** Estilos del Shop */
+
+.shop-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding-top: 100px;
+}
+
+.class-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    width: calc(25% - 100px); /* Ancho de cada producto para cuatro columnas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido dentro de cada producto */
+}
+
+.class-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.class-card h3 {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.class-card h4 {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.class-card .class-precio {
+    font-family: "Play", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1em;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.class-comprar {
+    /* background-color: #007bff; */
+    background-color: #0f68c6da;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.class-comprar:hover {
+    background-color: #0056b3;
+}
+
+/** Estilos del Modal (carrito)*/
+
+.modal-container {
+    width: 80%;
+    margin: 0 10%;
+    max-height: 88vh;
+    color: #fff;
+    background-color: rgba(27, 27, 27, 0.841);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 10;
+    top: 10vh;
+    scrollbar-color: none;
+}
+
+.modal-container::-webkit-scrollbar {
+    display: none;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #5f3a3ae8;
+    color: #fff;
+    width: 100%;
+}
+
+.modal-header-title {
+    justify-self: start;
+}
+
+.modal-header h1 {
+    padding-top: 60px;
+}
+
+.modal-header-button {
+    cursor: pointer;
+}
+
+.modal-container .modal-content {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 10px;
+}
+
+.modal-container div img {
+    border-radius: 10px;
+    height: 7.5rem;
+    width: 7.5rem;
+}
+
+.total-content {
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/* Boton de borrar producto */
+.delete-product {
+    cursor: pointer;
+}
+
+/** Estilos del About Us */
+
+.about-container {
+    height: 100rem;
+    margin-top: 20px;
+    padding-top: 100px;
+}
+
+/** Estilos de contacto */
+
+.contact-container {
+    height: 100rem;
+    margin-top: 20px;
+    padding-top: 100px;
+} 
+
+/** Estilos del formulario */
+.form {
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.mainContact {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    padding-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; 
+}
+
+input[type="submit"]:hover {
+    background-color: #333;
+}
+
+.button-form  {
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} 
+
+.button-form:hover {
+    background-color: #333;
+}
+.img-form img {
+    height: 250px;
+    width: 250px; 
+    border-radius: 10px;
+    margin-left: 150px; 
+    opacity: 80%;
+} 
+
+
+
+
+
+
+
+
+
+
+
